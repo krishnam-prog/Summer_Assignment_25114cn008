@@ -2,22 +2,28 @@
 using namespace std;
 int main()
 {
-    int n,i;
-    cout<<"Enter the no. to be checked";
+    int n,i=2,x=0;
+    cout<<"Enter the value of n;";
     cin>>n;
-    if(n==1)
-    {
-        cout<<"The no. is prime";
-    }
-    for(i=2;i<n;i++)
+    while(i<n)
     {
         if(n%i==0)
         {
-            cout<<"The no. is prime";
+            x=1;
+            break;
         }
         else
         {
-            cout<<"The no. is not prime";
+            x=0;
         }
+        i++;
+    }
+    if(x==1)
+    {
+        cout<<"NOT a prime no.;";
+    }
+    else
+    {
+        cout<<"YES it is a prime no.;";
     }
 }
